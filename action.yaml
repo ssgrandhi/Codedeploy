@@ -1,6 +1,42 @@
-  name: copy file via ssh key
-  uses: ssgrandhi/Codedeploy@master
-  cd /var/www/html/ &&
-  git pull origin master &&
-  git checkout master &&  
-  
+name: "ssh deploy"
+description: "NodeJS action for FAST deployment with rsync/ssh"
+author: "easingthemes"
+inputs:
+  SSH_PRIVATE_KEY: # Private Key
+    description: "Private Key"
+    required: true
+  REMOTE_HOST:
+    description: "Remote host"
+    required: true
+  REMOTE_USER:
+    description: "Remote user"
+    required: true
+  REMOTE_PORT:
+    description: "Remote port"
+    required: false
+    default: "22"
+  SOURCE:
+    description: "Source directory"
+    required: false
+    default: ""
+  TARGET:
+    description: "Target directory"
+    required: false
+    default: "/var/www/html/"
+  ARGS:
+    description: "Arguments to pass to rsync"
+    required: false
+    default: "-rltgoDzvO"
+  EXCLUDE:
+    description: "An array of folder to exclude"
+    required: false
+    default: ""
+outputs:
+  status:
+    description: "Status"
+runs:
+  using: "cmd"
+  main: "./index.html"
+branding:
+  color: "green"
+  icon: "truck"
