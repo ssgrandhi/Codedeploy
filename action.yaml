@@ -1,9 +1,6 @@
   name: copy file via ssh key
   uses: ssgrandhi/Codedeploy@master
-  with:
-    host: ${{ secrets.HOST }}
-    username: ${{ secrets.USERNAME }}
-    port: ${{ secrets.PORT }}
-    key: ${{ secrets.KEY }}
-    source: "./*"
-    target: "/var/ww/html/"
+  cd /var/www/html/ &&
+  git pull origin master &&
+  git checkout master &&  
+  
