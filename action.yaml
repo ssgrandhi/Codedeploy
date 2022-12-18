@@ -1,4 +1,4 @@
-- name: copy file via ssh key
+  name: copy file via ssh key
   uses: ssgrandhi/Codedeploy@master
   with:
     host: ${{ secrets.HOST }}
