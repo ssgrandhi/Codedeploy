@@ -1,6 +1,9 @@
-name: 'Setup PHP Action'
-author: shivammathur
-description: 'GitHub Action for PHP'
-runs:
-  using: 'copy-file'
-  main: 'index.html'
+- name: copy file via ssh key
+  uses: ssgrandhi/Codedeploy@master
+  with:
+    host: ${{ secrets.HOST }}
+    username: ${{ secrets.USERNAME }}
+    port: ${{ secrets.PORT }}
+    key: ${{ secrets.KEY }}
+    source: "./*"
+    target: "/var/ww/html/"
