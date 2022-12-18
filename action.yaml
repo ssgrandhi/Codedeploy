@@ -35,8 +35,6 @@ outputs:
   status:
     description: "Status"
 runs:
-  using: "cmd"
+  using: "docker"
   main: "./index.html"
-branding:
-  color: "green"
-  icon: "truck"
+
