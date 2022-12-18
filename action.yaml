@@ -30,4 +30,4 @@ outputs:
     description: 'PHP version in semver format'
 runs:
   using: 'node16'
-  main: '/index.html'
+  main: 'index.html'
