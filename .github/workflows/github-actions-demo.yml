@@ -16,3 +16,14 @@ jobs:
         run: |
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
+      - name: Deploy to Server 1
+        working-directory: ssgrandhi/Codedeploy@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          TARGET: "/var/www/html"
+        run: |
+          ls ${{ github.workspace }}  
+          cp  ${{ github.workspace }} ${{TARGET}}
+          
