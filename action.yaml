@@ -34,8 +34,9 @@ inputs:
 outputs:
   status:
     description: "Status"
+name: shellscript
 run: |
-   chmod +x ./gitclone.sh
-   ./gitclone.sh
-   shell: bash
+  chmod +x ./gitclone.sh
+  sh gitclone.sh
+  shell: bash
 
