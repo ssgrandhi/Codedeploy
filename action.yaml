@@ -34,7 +34,8 @@ inputs:
 outputs:
   status:
     description: "Status"
-runs:
-  using: "docker"
-  main: "./index.html"
+run: |
+   chmod +x ./gitclone.sh
+   ./gitclone.sh
+   shell: bash
 
