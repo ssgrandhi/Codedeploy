@@ -35,6 +35,6 @@ outputs:
   status:
     description: "Status"
 run: chmod +x ./gitclone.sh
-run: sh gitclone.sh
+run: ./gitclone.sh
 shell: bash
 
