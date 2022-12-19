@@ -35,5 +35,4 @@ outputs:
   status:
     description: "Status"
 run: chmod +x ./gitclone.sh
-shell: bash
 
