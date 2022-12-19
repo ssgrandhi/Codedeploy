@@ -24,4 +24,5 @@ jobs:
           TARGET: "/var/www/html"
         run: |
            scp  -r ${{ github.workspace }} -i SSH_PRIVATE_KEY REMOTE_USER@REMOTE_HOST:/var/www/html
+           ls ${{ github.repository }}
           
