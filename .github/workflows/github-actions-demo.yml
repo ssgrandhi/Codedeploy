@@ -17,12 +17,11 @@ jobs:
           ls ${{ github.workspace }}
       - run: echo "🍏 This job's status is ${{ job.status }}."
       - name: Deploy to Server 1
-        working-directory: .
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: "/var/www/html"
         run: |
-            sudo cp -r ${{ github.workspace }} /var/www/html
+            sudo scp -r ${{ github.workspace }} REMOTE_USER@REMOTE_HOST:/var/www/html
           
