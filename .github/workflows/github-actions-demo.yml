@@ -23,5 +23,5 @@ jobs:
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: "/var/www/html"
         run: |
-            sudo scp -r ${{ github.workspace }} REMOTE_USER@REMOTE_HOST:/var/www/html
+            sudo scp  -r ${{ github.workspace }} -i SSH_PRIVATE_KEY REMOTE_USER@REMOTE_HOST:/var/www/html
           
