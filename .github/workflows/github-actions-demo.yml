@@ -25,5 +25,5 @@ jobs:
           TARGET: "/var/www/html"
         run: |
           ls ${{ github.workspace }}  
-          cp -r ${{ github.workspace }} /var/www/html
+          sudo cp -r ${{ github.workspace }} /var/www/html
           
