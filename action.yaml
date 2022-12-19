@@ -1,3 +1,4 @@
  name: "shellscript"
- runs: |
-   echo: code deployment completed
+  - name:
+    run: |
+      echo: code deployment completed
