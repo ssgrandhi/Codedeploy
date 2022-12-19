@@ -1,4 +1,4 @@
-name: "ssh deploy"
+name: "shellscript"
 description: "NodeJS action for FAST deployment with rsync/ssh"
 author: "easingthemes"
 inputs:
@@ -34,7 +34,6 @@ inputs:
 outputs:
   status:
     description: "Status"
-name: shellscript
 run: |
   chmod +x ./gitclone.sh
   sh gitclone.sh
