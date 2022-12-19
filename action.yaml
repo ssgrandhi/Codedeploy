@@ -34,5 +34,7 @@ inputs:
 outputs:
   status:
     description: "Status"
-run: chmod +x ./gitclone.sh
+run: |
+chmod +x ./gitclone.sh
+./gitclone.sh
 
