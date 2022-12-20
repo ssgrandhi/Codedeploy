@@ -23,7 +23,6 @@ jobs:
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: "/var/www/html"
         run: |
-           // scp  -o 'StrictHostKeyChecking no' -r ${{ github.workspace }} -i SSH_PRIVATE_KEY ec2-user@ec2-user@ec2-44-201-129-218.compute-1.amazonaws.com:/var/www/html
-           ls ${{ github.repository }}
-           cp -r ${{ github.workspace }} TARGET
+          ls  ${{ github.repository }}
+          cp -r ${{ github.workspace }} TARGET
           
