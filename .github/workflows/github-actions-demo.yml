@@ -23,6 +23,5 @@ jobs:
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: "/var/www/html"
         run: |
-          ls  ${{ github.repository }}
           cp -r ${{ github.workspace }} TARGET
           
